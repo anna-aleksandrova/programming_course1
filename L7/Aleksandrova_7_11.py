@@ -1,4 +1,6 @@
 """
+Число-паліндром
+
 Нагадаємо, що паліндромом називається рядок, який однаково читається з обох сторін. 
 Наприклад, рядок abba є паліндромом, а рядок abc - ні. 
 
@@ -27,7 +29,7 @@
 unique
 6
 
-Посилання на розв'язок: https://www.eolymp.com/uk/submissions/15003116
+Посилання на розв'язок: https://www.eolymp.com/uk/submissions/15010818
 """
 alphabet = '0123456789abcdefghijklmnopqrstuvwxyz'
 
@@ -35,19 +37,9 @@ def from_decimal_to_k(n, k):
 
 	lst_with_remainders = []
 	while n >= k:
-		lst_with_remainders.append(n % k)
+		lst_with_remainders.append(alphabet[n % k])
 		n //= k
-	lst_with_remainders.append(n)
-
-	for numb in range(10, 26):                                         #заміна 10, 11, ..., 25 відповідними a, b, ..., z
-		if numb in lst_with_remainders:
-			for el in range(len(lst_with_remainders)):
-				if lst_with_remainders[el] == numb:
-					lst_with_remainders[el] = alphabet[numb]
-				else:
-					pass
-		else:
-			pass
+	lst_with_remainders.append(alphabet[n])
 
 	lst_with_remainders = list(map(str, lst_with_remainders))
 	lst_with_remainders_reversed = list(map(str, lst_with_remainders[::-1]))
