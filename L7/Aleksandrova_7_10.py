@@ -34,11 +34,9 @@ def from_m_to_decimal(m, k, number):
 	for el in number:
 		lst_with_digits_of_number.append(alphabet.index(el))
 
-	digits_of_number_reversed = list(map(int, lst_with_digits_of_number))[::-1]
-
 	number_in_decimal = 0
-	for i in range(len(digits_of_number_reversed)):
-		number_in_decimal += digits_of_number_reversed[i] * (m**i)
+	for i in range(len(list(reversed(lst_with_digits_of_number)))):
+		number_in_decimal += list(reversed(lst_with_digits_of_number))[i] * (m**i)
 	return number_in_decimal
 
 
@@ -50,7 +48,7 @@ def from_decimal_to_k(number_in_decimal, k):
 		number_in_decimal //= k
 	lst_with_remainders.append(alphabet[number_in_decimal])
 
-	lst_with_remainders_reversed = list(map(str, lst_with_remainders[::-1]))
+	lst_with_remainders_reversed = map(str, lst_with_remainders[::-1])
 	
 	number_in_system_with_base_k = ""
 	number_in_system_with_base_k = number_in_system_with_base_k.join(lst_with_remainders_reversed)
