@@ -5,7 +5,7 @@ def value(expression):
 	operators = {"+": lambda x, y: x + y,
 				 "-": lambda x, y: x - y,
 				 "*": lambda x, y: x * y,
-				 "/": lambda x, y: x / y}
+				 "/": lambda x, y: x / y if y != 0 else "ZeroDivisionError"}
 
 	if type(expression) == float:
 		return float(expression)
