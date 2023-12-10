@@ -1,4 +1,3 @@
-import math
 def columns(matrix):
     matrix_columns = []
     for j in range(len(matrix[0])):
