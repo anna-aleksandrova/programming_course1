@@ -1,0 +1,4 @@
+-------task_1-------
+Maximum number:  100 / 1
+Absolute maximum number:  100 / 1
+The arithmetic mean:  4381101106179557 / 9745990062141650
