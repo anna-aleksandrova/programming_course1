@@ -305,6 +305,10 @@ class Polynomial(dict):
         """
         if not isinstance(other, Polynomial) and Polynomial.appropriate_coeff_type(type(other)) and Polynomial.appropriate_arg(other):
             other = Polynomial(other, type(other))
+        elif isinstance(other, Polynomial):
+            pass
+        else:
+            raise NotImplementedError()
         if self.coeff_type != other.coeff_type:
             if Polynomial.NUM_PRIORITY[self.coeff_type] < Polynomial.NUM_PRIORITY[other.coeff_type]:
                 self = self.as_type(other.coeff_type)
@@ -328,7 +332,7 @@ class Polynomial(dict):
                 other = Polynomial(other, type(other))
                 return other + self
             else:
-                NotImplementedError()
+                raise NotImplementedError()
     
     def __mul__(self, other):
         """Multiplies two polynomials.
