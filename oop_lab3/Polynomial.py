@@ -487,10 +487,3 @@ def euclidean_algorithm(poly1, poly2):
             break
         poly1, poly2 = poly2, poly1.div(poly2)[1]
     return poly1
-
-    
-    
-
-    
-        
-
