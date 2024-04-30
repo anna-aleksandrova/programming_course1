@@ -10,7 +10,9 @@ Typical usage example:
     y = RationalNumber.from_string('7/2')
 
 """
+from functools import total_ordering
 
+@total_ordering
 class RationalNumber:
     """Rational number, whose numerator is an integer and 
     denominator is a positive integer.
