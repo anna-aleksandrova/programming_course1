@@ -260,25 +260,4 @@ class RationalNumber:
         
     def __complex__(self):
         return self.num/self.den + 0j
-
-
-if __name__ == '__main__':
-    with open("input1.txt") as f:
-        numbers_as_str = f.readlines()
     
-    rationals = []
-    for number in numbers_as_str:
-        rationals.append(RationalNumber.from_string(number))
-    
-    max_num = rationals[0]
-    max_abs = abs(rationals[0])
-    suma = RationalNumber(0, 1)
-    for number in rationals:
-        if number > max_num:
-            max_num = number
-        if abs(number) > max_abs:
-            max_abs = abs(number)
-        suma += number
-    print("Maximum number: ", max_num)
-    print("Absolute maximum number: ", max_abs)
-    print("The arithmetic mean: ", RationalNumber._wrapper(suma / len(rationals)))
