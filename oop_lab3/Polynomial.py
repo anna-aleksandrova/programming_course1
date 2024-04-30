@@ -139,7 +139,7 @@ class Polynomial(dict):
             if Polynomial.NUM_PRIORITY[type(lst[i])] > Polynomial.NUM_PRIORITY[coeff_type]:
                 return TypeError(f"Wrong coefficient type. {lst[i]} is not of {coeff_type} type and can't be transformed into it.")
             else:
-                polynomial[i] = complex(lst[i])
+                polynomial[i] = coeff_type(lst[i])
         return polynomial
     
     def _from_number(number, coeff_type):
