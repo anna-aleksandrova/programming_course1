@@ -401,8 +401,10 @@ class Map:
 
     def show_for_user(self, user):
         """Displays a <self.map> as a game map for the user (object of <Player>). Marks ships 
-            as "X", mines as "O", shot squares as "S", destroyed objects as "*". If he pointed 
-            at a mine on the enemy's board, the appropriate squares will be marked as "*".
+            as "X", mines as "O", shot squares as "S", destroyed objects as "*". If they pointed 
+            at a mine on the enemy's board, the appropriate squares will be marked as "*" if 
+            they were empty, caught ships will be shot or destroyed (depends on the power of mine),
+            caught mines of <self> (user) will be revealed.
         
         Args:
             user (Player): Their board will be displayed.
@@ -732,7 +734,7 @@ class Player:
                     raise NotImplementedError("Maybe new objects were added.")
     
     def consequences(self, other, position, res, obj):
-        """Changes boards and objects.
+        """Changes boards and objects after attack.
 
         Args:
             other (Player): They were attacked.
