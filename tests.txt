@@ -1,0 +1,112 @@
+# 1
+
+Input:
+3
+3
+1 2 3
+1 2 3
+1 2 3
+
+Output:
+Upper triangular matrix:
+1.0 2.0 3.0
+0.0 0.0 0.0
+0.0 0.0 0.0
+
+Rank of the matrix: 1
+
+Determinant of the matrix: 0.00
+
+
+
+# 2
+
+Input:
+4
+4
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+
+Ouput:
+
+Upper triangular matrix:
+0.0 0.0 0.0 0.0
+0.0 0.0 0.0 0.0
+0.0 0.0 0.0 0.0
+0.0 0.0 0.0 0.0
+
+Rank of the matrix: 0
+
+Determinant of the matrix: 0.00
+
+
+
+# 3
+
+Input:
+5
+5
+25 -89 8 56 0
+0 0 0 0 0 
+24 -7 84 51 23
+0 0 2 4 1
+5 8 7 95 65
+
+Output:
+Upper triangular matrix:
+25.0 -89.0 8.0   56.0    0.0   
+0.0  78.44 76.32 -2.76   23.0  
+0.0  0.0   2.0   4.0     1.0   
+0.0  0.0   0.0   124.114 67.287
+0.0  0.0   0.0   0.0     0.0   
+
+Rank of the matrix: 4
+
+Determinant of the matrix: 0.00
+
+
+
+# 4
+
+Input:
+3
+3
+50 100 201
+89 15 17
+29 23 21
+
+Output:
+Upper triangular matrix:
+50.0 100.0  201.0  
+0.0  -163.0 -340.78
+0.0  0.0    -22.406
+
+Rank of the matrix: 3
+
+Determinant of the matrix: 182612.00
+
+
+
+# 5
+
+Input:
+3
+3
+3.5 4.6 7.8
+-20.014 145.87 65.98
+29.1 30.5 36.45
+
+Output:
+Upper triangular matrix:
+3.5 4.6     7.8    
+0.0 172.174 110.583
+0.0 0.0     -23.426
+
+Rank of the matrix: 3
+
+Determinant of the matrix: -14117.07
+
+ 
+
